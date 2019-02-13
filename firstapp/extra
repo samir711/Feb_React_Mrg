@@ -1,0 +1,22 @@
+//components//
+classbased
+-heavy as compare to functional
+-mulitple direction
+- both state and props
+
+functional
+-Ligth in weight
+-less 
+-props
+
+state & props
+
+// 
+function add(a,b) {
+    return a = b;
+}
+
+const add = (a, b) => {return a + b }
+
+//
+
