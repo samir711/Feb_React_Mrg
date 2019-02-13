@@ -20,3 +20,43 @@ const add = (a, b) => {return a + b }
 
 //
 
+const Header = () => {
+
+    return (
+
+        <header>
+            <h2>React App</h2>
+            <input type="text" placeholder = "Enter your Search"
+            />
+            <hr/>
+        </header>
+    )
+}
+///////////////////
+
+        const styles = {
+
+            header: {
+                background: 'tomato'
+            },
+            logo:{
+
+                color:'#fff',
+                textAlign:'center',
+                fontSize:'40px'
+
+            }
+        }
+        return(
+            <header style={styles.header}>
+            <h2 style={styles.logo}>React App</h2>
+            <center>
+            <input type="text" placeholder = "Enter your Search"/>
+            </center>
+            <hr/>
+        </header>
+        )
+    }
+    /////////////////////////
+
+
