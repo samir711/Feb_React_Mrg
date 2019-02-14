@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-import {BrowserRouter, Route, Link} from 'react';
+import {BrowserRouter, Route, Link} from 'react-router-dom';
 
 //Component
 
@@ -19,9 +19,9 @@ class Routing extends Component {
                         <Link to="/profile">Profile</Link>
 
                      </header>
-                            <Route path="/posts" Component={Posts}></Route>
-                            <Route exact path="/" Component={Home}></Route>
-                            <Route path="/profile" Component={Profile}></Route>
+                            <Route path="/posts" component={Posts}></Route>
+                            <Route exact path="/" component={Home}></Route>
+                            <Route path="/profile" component={Profile}></Route>
                  </div>
             </BrowserRouter>
 
