@@ -6,9 +6,10 @@ import React from 'react';
 const NewsList = (props) => {
     console.log("Data in new list",props)
 
-    const renderNews = props.newsData.map((data) => {
+    const renderNews = props.newsData.map((data, index) => {
+   ;
         return(
-             <div>
+             <div key={index}>
                 <h3> {data.title}</h3>
                 <div>
                 {data.feed}

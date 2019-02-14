@@ -17,18 +17,31 @@ class App extends Component {
         super(props)
 
         this.state = {
-            news : JSON
+            news : JSON,
+            filtered: JSON
 
         }
     }
+
+    filterNews(keyword) {
+   //     console.log("getting in filter", keyword);
+        let filtered = this.state.news.filter((item) => {
+            return item.title.toLowerCase().indexOf(keyword.toLowerCase()) > -1;
+
+        });
+    
+        this.setState({filtered:filtered})
+   //console.log(filtered);
+    }
+
 
     render() {
          
         return(
 
             <div>
-            <Header/>
-            <NewsList newsData = {this.state.news}/>
+            <Header newSearch= {(data) => this.filterNews(data)}/>
+            <NewsList newsData = {this.state.filtered}/>
             {/* <h1>React First Component with react</h1>
             <h1>React with Redux</h1> */}
 
