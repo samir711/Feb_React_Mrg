@@ -12,14 +12,15 @@ class Header extends Component {
 
         this.state = {
             title: 'React News App',
-            keyword: 'User Search'
+            keyword: 'User Search',
+            search: 'User Search'
 
         }
     }
 
     inputChange(event) {
         console.log(event.target.value);
-        this.setState({keyword:(event.target.value?event.target.value:"User Search")})
+        this.setState({keyword:(event.target.value?event.target.value:'User Search')});
 
     }
     render() {
